@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="数组," />
 
 
 
@@ -39,19 +39,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="今天学习es6，学到了一个简单高效的js去重方法，现在整理一下几种数组去重的方法。
+方法1（效率不高）：12345678910111213Array.prototype.unique1 = function() &amp;#123;    var res = []; //创建一个新的临时数组    for(var i = 0,len=this.length; i &amp;lt; len; i++) &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo的基本git操作">
-<meta property="og:url" content="http://edison86.github.io/2016/08/19/hello-world/index.html">
+<meta property="og:title" content="JS数组去重">
+<meta property="og:url" content="http://edison86.github.io/2016/08/21/js数组去重/index.html">
 <meta property="og:site_name" content="Edison的部落格">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-08-21T04:02:51.618Z">
+<meta property="og:description" content="今天学习es6，学到了一个简单高效的js去重方法，现在整理一下几种数组去重的方法。
+方法1（效率不高）：12345678910111213Array.prototype.unique1 = function() &amp;#123;    var res = []; //创建一个新的临时数组    for(var i = 0,len=this.length; i &amp;lt; len; i++) &amp;#123;">
+<meta property="og:updated_time" content="2016-08-21T10:50:53.174Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo的基本git操作">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="JS数组去重">
+<meta name="twitter:description" content="今天学习es6，学到了一个简单高效的js去重方法，现在整理一下几种数组去重的方法。
+方法1（效率不高）：12345678910111213Array.prototype.unique1 = function() &amp;#123;    var res = []; //创建一个新的临时数组    for(var i = 0,len=this.length; i &amp;lt; len; i++) &amp;#123;">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +61,7 @@ Quick">
   };
 </script>
 
-  <title> Hexo的基本git操作 | Edison的部落格 </title>
+  <title> JS数组去重 | Edison的部落格 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -170,7 +170,7 @@ Quick">
           
           
             
-              Hexo的基本git操作
+              JS数组去重
             
           
         </h1>
@@ -179,11 +179,26 @@ Quick">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-08-19T19:42:33+08:00" content="2016-08-19">
-            2016-08-19
+          <time itemprop="dateCreated" datetime="2016-08-21T18:50:00+08:00" content="2016-08-21">
+            2016-08-21
           </time>
         </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/JS/" itemprop="url" rel="index">
+                  <span itemprop="name">JS</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
         
 
         
@@ -191,11 +206,11 @@ Quick">
             <span class="post-comments-count">
               &nbsp; | &nbsp;
               <!--
-              <a href="/2016/08/19/hello-world/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/19/hello-world/" itemprop="commentsCount"></span>
+              <a href="/2016/08/21/js数组去重/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/21/js数组去重/" itemprop="commentsCount"></span>
               </a>
               -->
-              <a href="/2016/08/19/hello-world/#comments" itemprop="discussionUrl">
+              <a href="/2016/08/21/js数组去重/#comments" itemprop="discussionUrl">
                 <span>评论</span>
               </a>
             </span>
@@ -210,20 +225,22 @@ Quick">
       
 
       
-        <span itemprop="articleBody"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <span itemprop="articleBody"><p>今天学习es6，学到了一个简单高效的js去重方法，现在整理一下几种数组去重的方法。</p>
+<h3 id="方法1（效率不高）："><a href="#方法1（效率不高）：" class="headerlink" title="方法1（效率不高）："></a>方法1（效率不高）：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.unique1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> res = []; <span class="comment">//创建一个新的临时数组</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>,len=<span class="keyword">this</span>.length; i &lt; len; i++) &#123;</div><div class="line">        <span class="comment">//如果临时数组有当前项，则跳过；没有则添加到临时数组。</span></div><div class="line">        <span class="keyword">if</span> (res.indexOf(<span class="keyword">this</span>[i]) == <span class="number">-1</span>)&#123;</div><div class="line">            res.push(<span class="keyword">this</span>[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">1</span>,<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>,<span class="string">'b'</span>, <span class="string">'e'</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.unique1())</div></pre></td></tr></table></figure>
+<h3 id="方法2（有局限性）："><a href="#方法2（有局限性）：" class="headerlink" title="方法2（有局限性）："></a>方法2（有局限性）：</h3><p>注：由于得到的数组是排序后的数组，所以有一定的局限性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.unique2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.sort(); <span class="comment">// 将数组排序</span></div><div class="line">    <span class="keyword">var</span> res = [<span class="keyword">this</span>[<span class="number">0</span>]]; <span class="comment">//创建一个新的临时数组</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>,len=<span class="keyword">this</span>.length; i &lt; len; i++) &#123;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>[i]!==res[res.length<span class="number">-1</span>])&#123;</div><div class="line">            res.push(<span class="keyword">this</span>[i])</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">1</span>,<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>,<span class="string">'b'</span>, <span class="string">'e'</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.unique2())</div></pre></td></tr></table></figure></p>
+<h3 id="方法3（推荐）："><a href="#方法3（推荐）：" class="headerlink" title="方法3（推荐）："></a>方法3（推荐）：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.unique3 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> res = []; <span class="comment">//创建一个空的临时数组</span></div><div class="line">    <span class="keyword">var</span> json = &#123;&#125;; <span class="comment">//创建一个空对象</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>,len=<span class="keyword">this</span>.length; i &lt; len; i++) &#123;</div><div class="line">        <span class="comment">//将数组元素与对象中的属性对比，</span></div><div class="line">        <span class="comment">//如果对象中有此属性，则跳过；如果没有此属性，将此元素添加到临时数组中，</span></div><div class="line">        <span class="comment">//同时将此元素作为对象的一个属性，并赋值为1，添加到对象中。</span></div><div class="line">        <span class="keyword">if</span> (!json[<span class="keyword">this</span>[i]])&#123;</div><div class="line">            res.push(<span class="keyword">this</span>[i]);</div><div class="line">		    json[<span class="keyword">this</span>[i]]=<span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">1</span>,<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>,<span class="string">'b'</span>, <span class="string">'e'</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.unique3())</div></pre></td></tr></table></figure>
+<h3 id="方法4（推荐）："><a href="#方法4（推荐）：" class="headerlink" title="方法4（推荐）："></a>方法4（推荐）：</h3><p>注：利用es6中的set数据结构和Array.from()方法，简单高效！<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.unique3 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>(<span class="keyword">this</span>);</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Array</span>.from(set);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">1</span>,<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>,<span class="string">'b'</span>, <span class="string">'e'</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.unique4())</div></pre></td></tr></table></figure></p>
 </span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数组/" rel="tag">#数组</a>
+          
+        </div>
       
 
       
@@ -299,51 +316,6 @@ Quick">
 
 
 
-    
-
-    <div class ="post-donate">
-        <div id="donate_board" class="donate_bar center">
-              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
-              <span id="donate_txt" class="donate_txt">
-                   
-                        仅仅是一个功能
-                   
-              </span>
-            <br>
-        </div>  
-  
-        <div id="donate_guide" class="donate_bar center hidden">
-            <!--
-              
-
-            
-            -->
-            <table>
-                <tr>
-                    <td>
-                         
-                    </td>
-                    <td>
-                        
-                    </td>
-                </tr>
-            </table>
-
-        </div>
-
-        <script type="text/javascript">
-            document.getElementById('btn_donate').onclick = function() {
-                $('#donate_board').addClass('hidden');
-                // $('#donate_guide').removeClass('hidden');
-                $('#donate_guide').show(2000);
-            }
-
-        </script>
-    </div>
-
-    
-
-
       
     </div>
 
@@ -371,8 +343,8 @@ Quick">
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/08/19/hello-world/"
-                   data-title="Hexo的基本git操作" data-url="http://edison86.github.io/2016/08/19/hello-world/">
+              <div class="ds-thread" data-thread-key="2016/08/21/js数组去重/"
+                   data-title="JS数组去重" data-url="http://edison86.github.io/2016/08/21/js数组去重/">
               </div>
             
           </div>
@@ -419,14 +391,14 @@ Quick">
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -475,7 +447,7 @@ Quick">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法1（效率不高）："><span class="nav-number">1.</span> <span class="nav-text">方法1（效率不高）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法2（有局限性）："><span class="nav-number">2.</span> <span class="nav-text">方法2（有局限性）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法3（推荐）："><span class="nav-number">3.</span> <span class="nav-text">方法3（推荐）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法4（推荐）："><span class="nav-number">4.</span> <span class="nav-text">方法4（推荐）：</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
