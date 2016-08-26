@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="数组," />
+  <meta name="keywords" content="li," />
 
 
 
@@ -39,19 +39,18 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="今天学习es6，学到了一个简单高效又没有bug的js去重方法，现在整理一下几种数组去重的方法，并对这几种方法做一个比较。
-方法1（效率不高）：12345678910111213Array.prototype.unique1 = function() &amp;#123;    var res = []; //创建一个新的临时数组    for(var i = 0,len=this.length; i &amp;l">
+<meta name="description" content="问题描述：页面布局中，有时候我们需要将li元素水平排列，如导航条的水平排列。当设置li元素display：inline-block时，两个li元素之间会有一个空隙。如下所示:html12345&amp;lt;ul&amp;gt;    &amp;lt;li id=&quot;li1&quot;&amp;gt;首页&amp;lt;/li&amp;gt;    &amp;lt;li id=&quot;li2&quot;&amp;gt;男装&amp;lt;/li&amp;gt;    &amp;lt;li id=&quot;li3&quot;&amp;gt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS数组去重">
-<meta property="og:url" content="http://edison86.github.io/2016/08/21/js数组去重/index.html">
+<meta property="og:title" content="水平排列li元素之间的空白去除">
+<meta property="og:url" content="http://edison86.github.io/2016/08/26/水平排列li元素之间的空白去除/index.html">
 <meta property="og:site_name" content="Edison的部落格">
-<meta property="og:description" content="今天学习es6，学到了一个简单高效又没有bug的js去重方法，现在整理一下几种数组去重的方法，并对这几种方法做一个比较。
-方法1（效率不高）：12345678910111213Array.prototype.unique1 = function() &amp;#123;    var res = []; //创建一个新的临时数组    for(var i = 0,len=this.length; i &amp;l">
-<meta property="og:updated_time" content="2016-08-22T07:26:12.151Z">
+<meta property="og:description" content="问题描述：页面布局中，有时候我们需要将li元素水平排列，如导航条的水平排列。当设置li元素display：inline-block时，两个li元素之间会有一个空隙。如下所示:html12345&amp;lt;ul&amp;gt;    &amp;lt;li id=&quot;li1&quot;&amp;gt;首页&amp;lt;/li&amp;gt;    &amp;lt;li id=&quot;li2&quot;&amp;gt;男装&amp;lt;/li&amp;gt;    &amp;lt;li id=&quot;li3&quot;&amp;gt">
+<meta property="og:image" content="http://i.imgur.com/Hk0CEyB.png">
+<meta property="og:updated_time" content="2016-08-26T13:18:24.381Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS数组去重">
-<meta name="twitter:description" content="今天学习es6，学到了一个简单高效又没有bug的js去重方法，现在整理一下几种数组去重的方法，并对这几种方法做一个比较。
-方法1（效率不高）：12345678910111213Array.prototype.unique1 = function() &amp;#123;    var res = []; //创建一个新的临时数组    for(var i = 0,len=this.length; i &amp;l">
+<meta name="twitter:title" content="水平排列li元素之间的空白去除">
+<meta name="twitter:description" content="问题描述：页面布局中，有时候我们需要将li元素水平排列，如导航条的水平排列。当设置li元素display：inline-block时，两个li元素之间会有一个空隙。如下所示:html12345&amp;lt;ul&amp;gt;    &amp;lt;li id=&quot;li1&quot;&amp;gt;首页&amp;lt;/li&amp;gt;    &amp;lt;li id=&quot;li2&quot;&amp;gt;男装&amp;lt;/li&amp;gt;    &amp;lt;li id=&quot;li3&quot;&amp;gt">
+<meta name="twitter:image" content="http://i.imgur.com/Hk0CEyB.png">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +60,7 @@
   };
 </script>
 
-  <title> JS数组去重 | Edison的部落格 </title>
+  <title> 水平排列li元素之间的空白去除 | Edison的部落格 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -170,7 +169,7 @@
           
           
             
-              JS数组去重
+              水平排列li元素之间的空白去除
             
           
         </h1>
@@ -179,8 +178,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-08-21T19:47:44+08:00" content="2016-08-21">
-            2016-08-21
+          <time itemprop="dateCreated" datetime="2016-08-26T20:27:56+08:00" content="2016-08-26">
+            2016-08-26
           </time>
         </span>
 
@@ -189,8 +188,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/JS/" itemprop="url" rel="index">
-                  <span itemprop="name">JS</span>
+                <a href="/categories/HTML/" itemprop="url" rel="index">
+                  <span itemprop="name">HTML</span>
                 </a>
               </span>
 
@@ -206,11 +205,11 @@
             <span class="post-comments-count">
               &nbsp; | &nbsp;
               <!--
-              <a href="/2016/08/21/js数组去重/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/21/js数组去重/" itemprop="commentsCount"></span>
+              <a href="/2016/08/26/水平排列li元素之间的空白去除/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/26/水平排列li元素之间的空白去除/" itemprop="commentsCount"></span>
               </a>
               -->
-              <a href="/2016/08/21/js数组去重/#comments" itemprop="discussionUrl">
+              <a href="/2016/08/26/水平排列li元素之间的空白去除/#comments" itemprop="discussionUrl">
                 <span>评论</span>
               </a>
             </span>
@@ -225,11 +224,11 @@
       
 
       
-        <span itemprop="articleBody"><p>今天学习es6，学到了一个简单高效又没有bug的js去重方法，现在整理一下几种数组去重的方法，并对这几种方法做一个比较。</p>
-<h3 id="方法1（效率不高）："><a href="#方法1（效率不高）：" class="headerlink" title="方法1（效率不高）："></a>方法1（效率不高）：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.unique1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> res = []; <span class="comment">//创建一个新的临时数组</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>,len=<span class="keyword">this</span>.length; i &lt; len; i++) &#123;</div><div class="line">        <span class="comment">//如果临时数组有当前项，则跳过；没有则添加到临时数组。</span></div><div class="line">        <span class="keyword">if</span> (res.indexOf(<span class="keyword">this</span>[i]) == <span class="number">-1</span>)&#123;</div><div class="line">            res.push(<span class="keyword">this</span>[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="string">'1'</span>,<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>,<span class="string">'b'</span>, <span class="string">'e'</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.unique1())</div></pre></td></tr></table></figure>
-<h3 id="方法2（有局限性）："><a href="#方法2（有局限性）：" class="headerlink" title="方法2（有局限性）："></a>方法2（有局限性）：</h3><p>注：由于得到的数组是排序后的数组，所以有一定的局限性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.unique2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.sort(); <span class="comment">// 将数组排序</span></div><div class="line">    <span class="keyword">var</span> res = [<span class="keyword">this</span>[<span class="number">0</span>]]; <span class="comment">//创建一个新的临时数组</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>,len=<span class="keyword">this</span>.length; i &lt; len; i++) &#123;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>[i]!==res[res.length<span class="number">-1</span>])&#123;</div><div class="line">            res.push(<span class="keyword">this</span>[i])</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="string">'1'</span>,<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>,<span class="string">'b'</span>, <span class="string">'e'</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.unique2())</div></pre></td></tr></table></figure></p>
-<h3 id="方法3（有bug）："><a href="#方法3（有bug）：" class="headerlink" title="方法3（有bug）："></a>方法3（有bug）：</h3><p>注：会将字符’1’强制类型转换为数字1<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.unique3 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> res = []; <span class="comment">//创建一个空的临时数组</span></div><div class="line">    <span class="keyword">var</span> json = &#123;&#125;; <span class="comment">//创建一个空对象</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>,len=<span class="keyword">this</span>.length; i &lt; len; i++) &#123;</div><div class="line">        <span class="comment">//将数组元素与对象中的属性对比，</span></div><div class="line">        <span class="comment">//如果对象中有此属性，则跳过；如果没有此属性，将此元素添加到临时数组中，</span></div><div class="line">        <span class="comment">//同时将此元素作为对象的一个属性，并赋值为1，添加到对象中。</span></div><div class="line">        <span class="keyword">if</span> (!json[<span class="keyword">this</span>[i]])&#123;</div><div class="line">            res.push(<span class="keyword">this</span>[i]);</div><div class="line">		    json[<span class="keyword">this</span>[i]]=<span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="string">'1'</span>,<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>,<span class="string">'b'</span>, <span class="string">'e'</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.unique3())</div></pre></td></tr></table></figure></p>
-<h3 id="方法4（推荐）："><a href="#方法4（推荐）：" class="headerlink" title="方法4（推荐）："></a>方法4（推荐）：</h3><p>注：利用es6中的set数据结构和Array.from()方法，简单高效没有bug！<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.unique4 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>(<span class="keyword">this</span>);</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Array</span>.from(set);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">1</span>,<span class="string">'a'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>,<span class="string">'b'</span>, <span class="string">'e'</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.unique4())</div></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>页面布局中，有时候我们需要将li元素水平排列，如导航条的水平排列。当设置li元素display：inline-block时，两个li元素之间会有一个空隙。如下所示:<br>html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"li1"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"li2"</span>&gt;</span>男装<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"li3"</span>&gt;</span>女装<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>css<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">li</span>&#123; <span class="attribute">margin</span>: <span class="number">0</span>;  <span class="attribute">display</span>: inline-block;  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">5px</span>; &#125;</div><div class="line"><span class="selector-id">#li1</span>&#123; <span class="attribute">background-color</span>: <span class="number">#7740ff</span>; &#125;</div><div class="line"><span class="selector-id">#li2</span>&#123; <span class="attribute">background-color</span>: <span class="number">#ff2177</span>; &#125;</div><div class="line"><span class="selector-id">#li3</span>&#123; <span class="attribute">background-color</span>: <span class="number">#47ff3e</span>; &#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://i.imgur.com/Hk0CEyB.png" alt=""></p>
+<h3 id="原因分析："><a href="#原因分析：" class="headerlink" title="原因分析："></a>原因分析：</h3><p>浏览器有一个默认行为，会把inline元素之间的空白字符渲染成一个空格。<br>上面代码中的 li 标签在换行后会产生换行字符，浏览器会将其渲染成一个空格。</p>
+<h3 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h3><h5 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h5><p>既然空格是由于 li 换行产生的，那就可以将 li 代码写在一排。但是如果太多的 li 代码写在一行的话，代码就不够直观。如下:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"li1"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"li2"</span>&gt;</span>男装<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"li3"</span>&gt;</span>女装<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"li3"</span>&gt;</span>男鞋<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"li3"</span>&gt;</span>女鞋<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">```	</div><div class="line">##### 方法二： </div><div class="line">先给ul设置font-size:0 以便消除空格，再给li重新设置font-size。</div><div class="line">##### 方法三： </div><div class="line">可以将li标签不闭合，浏览器在解析的过程中会自动补全。</div><div class="line">```html</div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"li1"</span>&gt;</span>首页</div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"li2"</span>&gt;</span>男装</div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"li3"</span>&gt;</span>女装</div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -238,7 +237,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数组/" rel="tag">#数组</a>
+            <a href="/tags/li/" rel="tag">#li</a>
           
         </div>
       
@@ -247,11 +246,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/25/绝对定位元素水平垂直居中/" rel="prev">绝对定位元素水平垂直居中</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/25/绝对定位元素水平垂直居中/" rel="next">绝对定位元素水平垂直居中</a>
             
           </div>
         </div>
@@ -355,8 +354,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/08/21/js数组去重/"
-                   data-title="JS数组去重" data-url="http://edison86.github.io/2016/08/21/js数组去重/">
+              <div class="ds-thread" data-thread-key="2016/08/26/水平排列li元素之间的空白去除/"
+                   data-title="水平排列li元素之间的空白去除" data-url="http://edison86.github.io/2016/08/26/水平排列li元素之间的空白去除/">
               </div>
             
           </div>
@@ -459,7 +458,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法1（效率不高）："><span class="nav-number">1.</span> <span class="nav-text">方法1（效率不高）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法2（有局限性）："><span class="nav-number">2.</span> <span class="nav-text">方法2（有局限性）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法3（有bug）："><span class="nav-number">3.</span> <span class="nav-text">方法3（有bug）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法4（推荐）："><span class="nav-number">4.</span> <span class="nav-text">方法4（推荐）：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述："><span class="nav-number">1.</span> <span class="nav-text">问题描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原因分析："><span class="nav-number">2.</span> <span class="nav-text">原因分析：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案："><span class="nav-number">3.</span> <span class="nav-text">解决方案：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方法一："><span class="nav-number">3.0.1.</span> <span class="nav-text">方法一：</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
