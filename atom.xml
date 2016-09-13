@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://edison86.github.io/"/>
-  <updated>2016-09-13T02:22:58.384Z</updated>
+  <updated>2016-09-13T02:25:59.834Z</updated>
   <id>http://edison86.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://edison86.github.io/2016/09/13/jQuery%E7%BC%96%E7%A0%81%E6%A0%87%E5%87%86&amp;%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
     <id>http://edison86.github.io/2016/09/13/jQuery编码标准&amp;最佳实践/</id>
     <published>2016-09-13T02:05:03.630Z</published>
-    <updated>2016-09-13T02:22:58.384Z</updated>
+    <updated>2016-09-13T02:25:59.834Z</updated>
     
     <content type="html"><![CDATA[<h6 id="今天在网上看到一篇英文文献，觉得有许多值得参考的地方，于是翻译出来并对一些观点发表一下我个人的看法。原文地址：-http-lab-abhinayrathore-com-jquery-standards-全文翻译如下："><a href="#今天在网上看到一篇英文文献，觉得有许多值得参考的地方，于是翻译出来并对一些观点发表一下我个人的看法。原文地址：-http-lab-abhinayrathore-com-jquery-standards-全文翻译如下：" class="headerlink" title="今天在网上看到一篇英文文献，觉得有许多值得参考的地方，于是翻译出来并对一些观点发表一下我个人的看法。原文地址：[http://lab.abhinayrathore.com/jquery-standards/ ] 全文翻译如下："></a>今天在网上看到一篇英文文献，觉得有许多值得参考的地方，于是翻译出来并对一些观点发表一下我个人的看法。原文地址：[<a href="http://lab.abhinayrathore.com/jquery-standards/" target="_blank" rel="external">http://lab.abhinayrathore.com/jquery-standards/</a> ] 全文翻译如下：</h6><p>用jQuery编写代码，有一些通用的标准和最佳的实践。这些标准没有全面的覆盖JavaScript标准或者最佳的实践。如果你有一些问题、意见或者改善方面，请在我的博客上留言。浏览这个jQuery参考目录的清单。</p>
 <h2 id="加载jQuery"><a href="#加载jQuery" class="headerlink" title="加载jQuery"></a>加载jQuery</h2><ol>
@@ -186,7 +186,9 @@
       <category term="jQuery" scheme="http://edison86.github.io/categories/jQuery/"/>
     
     
-      <category term="jQuery 外文翻译" scheme="http://edison86.github.io/tags/jQuery-%E5%A4%96%E6%96%87%E7%BF%BB%E8%AF%91/"/>
+      <category term="jQuery" scheme="http://edison86.github.io/tags/jQuery/"/>
+    
+      <category term="外文翻译" scheme="http://edison86.github.io/tags/%E5%A4%96%E6%96%87%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
