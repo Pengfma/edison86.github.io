@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://edison86.github.io/"/>
-  <updated>2016-09-13T02:06:38.537Z</updated>
+  <updated>2016-09-13T02:22:58.384Z</updated>
   <id>http://edison86.github.io/</id>
   
   <author>
@@ -20,14 +20,15 @@
     <link href="http://edison86.github.io/2016/09/13/jQuery%E7%BC%96%E7%A0%81%E6%A0%87%E5%87%86&amp;%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
     <id>http://edison86.github.io/2016/09/13/jQuery编码标准&amp;最佳实践/</id>
     <published>2016-09-13T02:05:03.630Z</published>
-    <updated>2016-09-13T02:06:38.537Z</updated>
+    <updated>2016-09-13T02:22:58.384Z</updated>
     
     <content type="html"><![CDATA[<h6 id="今天在网上看到一篇英文文献，觉得有许多值得参考的地方，于是翻译出来并对一些观点发表一下我个人的看法。原文地址：-http-lab-abhinayrathore-com-jquery-standards-全文翻译如下："><a href="#今天在网上看到一篇英文文献，觉得有许多值得参考的地方，于是翻译出来并对一些观点发表一下我个人的看法。原文地址：-http-lab-abhinayrathore-com-jquery-standards-全文翻译如下：" class="headerlink" title="今天在网上看到一篇英文文献，觉得有许多值得参考的地方，于是翻译出来并对一些观点发表一下我个人的看法。原文地址：[http://lab.abhinayrathore.com/jquery-standards/ ] 全文翻译如下："></a>今天在网上看到一篇英文文献，觉得有许多值得参考的地方，于是翻译出来并对一些观点发表一下我个人的看法。原文地址：[<a href="http://lab.abhinayrathore.com/jquery-standards/" target="_blank" rel="external">http://lab.abhinayrathore.com/jquery-standards/</a> ] 全文翻译如下：</h6><p>用jQuery编写代码，有一些通用的标准和最佳的实践。这些标准没有全面的覆盖JavaScript标准或者最佳的实践。如果你有一些问题、意见或者改善方面，请在我的博客上留言。浏览这个jQuery参考目录的清单。</p>
 <h2 id="加载jQuery"><a href="#加载jQuery" class="headerlink" title="加载jQuery"></a>加载jQuery</h2><ol>
 <li><p>尽量使用CDN将jQuery引入你的页面。</p>
-<p> <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><br> <script>window.jQuery || document.write(‘<script src="js/jquery-2.1.4.min.js" type="text/javascript">&lt;\/script&gt;’)</script><br> 点击这里查看一份流行的jQuery CDN清单[<a href="http://lab.abhinayrathore.com/jquery-cheatsheet/]。" target="_blank" rel="external">http://lab.abhinayrathore.com/jquery-cheatsheet/]。</a> </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt;window.jQuery || document.write(&apos;&lt;script src=&quot;js/jquery-2.1.4.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;\/script&gt;&apos;)&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p> 点击这里查看一份流行的jQuery CDN清单[<a href="http://lab.abhinayrathore.com/jquery-cheatsheet/]。" target="_blank" rel="external">http://lab.abhinayrathore.com/jquery-cheatsheet/]。</a></p>
 </li>
-<li><p>如上所示，在你本地托管库建立一个备用的相同版本。</p>
+<li><p>如上所示，在你本地托管库建立一个备用的相同版本.</p>
 </li>
 <li>如上所示，使用协议无关的URL（忽略http:或者https:）。</li>
 <li>如果可能的话，将你的所有的JavaScript和jQuery文件放置在页面的底部引入。</li>
@@ -99,7 +100,7 @@
  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; ... &#125;); <span class="comment">// 不好: </span></div><div class="line"> </div><div class="line"><span class="comment">// 好</span></div><div class="line">$(initPage); <span class="comment">// 或者 $(document).ready(initPage);</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initPage</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">// 页面加载事件，你可以在这里初始化初始值或者调用其他的初始工具</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>Document ready事件处理应包括来自外部的文件并且内联JavaScript可以用来调用任何初始化设置后的ready处理程序。</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"my-document-ready.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script&gt;</div><div class="line">	<span class="comment">// 一些全局变量的设置</span></div><div class="line">	$(<span class="built_in">document</span>).ready(initPage); <span class="comment">// or $(initPage);</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"my-document-ready.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	<span class="comment">// 一些全局变量的设置</span></div><div class="line">	$(<span class="built_in">document</span>).ready(initPage); <span class="comment">// or $(initPage);</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>不要在HTML中使用（JavaScript的内联）行为标记，这些是调试的噩梦。始终使用jQuery绑定事件保持一致性，从而更容易添加和动态删除事件。</p>
  <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;a id="myLink" href="#" onclick="myEventHandler();"&gt;my link&lt;/a&gt; &lt;!-- BAD --&gt;</div><div class="line">$("#myLink").on("click", myEventHandler); // GOOD</div></pre></td></tr></table></figure>
@@ -185,7 +186,7 @@
       <category term="jQuery" scheme="http://edison86.github.io/categories/jQuery/"/>
     
     
-      <category term="jQuery" scheme="http://edison86.github.io/tags/jQuery/"/>
+      <category term="jQuery 外文翻译" scheme="http://edison86.github.io/tags/jQuery-%E5%A4%96%E6%96%87%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
